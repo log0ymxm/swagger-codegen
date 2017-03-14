@@ -14,14 +14,13 @@ package io.swagger.client.model
 
 
 case class User (
-  id: Option[Long],
-  username: Option[String],
-  firstName: Option[String],
-  lastName: Option[String],
-  email: Option[String],
-  password: Option[String],
-  phone: Option[String],
+  id: Long,
+  username: String,
+  firstName: String,
+  lastName: String,
+  email: String,
+  password: String,
+  phone: String,
   /* User Status */
-  userStatus: Option[Integer]
+  userStatus: Integer
 )
-

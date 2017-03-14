@@ -71,7 +71,7 @@ export declare class OAuth implements Authentication {
 export declare class VoidAuth implements Authentication {
     username: string;
     password: string;
-    applyToRequest(requestOptions: request.Options): void;
+    applyToRequest(_: request.Options): void;
 }
 export declare enum PetApiApiKeys {
     api_key = 0,
@@ -89,7 +89,6 @@ export declare class PetApi {
     useQuerystring: boolean;
     setApiKey(key: PetApiApiKeys, value: string): void;
     accessToken: string;
-    private extendObj<T1, T2>(objA, objB);
     addPet(body?: Pet): Promise<{
         response: http.ClientResponse;
         body?: any;
@@ -118,7 +117,7 @@ export declare class PetApi {
         response: http.ClientResponse;
         body?: any;
     }>;
-    uploadFile(petId: number, additionalMetadata?: string, file?: any): Promise<{
+    uploadFile(petId: number, additionalMetadata?: string, file?: Buffer): Promise<{
         response: http.ClientResponse;
         body?: any;
     }>;
@@ -139,7 +138,6 @@ export declare class StoreApi {
     useQuerystring: boolean;
     setApiKey(key: StoreApiApiKeys, value: string): void;
     accessToken: string;
-    private extendObj<T1, T2>(objA, objB);
     deleteOrder(orderId: string): Promise<{
         response: http.ClientResponse;
         body?: any;
@@ -175,7 +173,6 @@ export declare class UserApi {
     useQuerystring: boolean;
     setApiKey(key: UserApiApiKeys, value: string): void;
     accessToken: string;
-    private extendObj<T1, T2>(objA, objB);
     createUser(body?: User): Promise<{
         response: http.ClientResponse;
         body?: any;
